@@ -1,0 +1,30 @@
+\ifpkglayout
+  \RequirePackage{bookman}
+  \RequirePackage[T1]{fontenc}
+  \RequirePackage{xeCJK}
+  \renewcommand{\sfdefault}{lmss}
+%  \xeCJKsetup{AutoFakeSlant=true,AutoFakeBold=true}
+\fi
+\newCJKfontfamily{\sectioncf}[ItalicFont={黑体},BoldFont={黑体},BoldItalicFont={黑体},SmallCapsFont={黑体}]{SimHei}
+\newCJKfontfamily{\parcf}[ItalicFont={KaiTi},BoldFont={黑体},BoldItalicFont={KaiTi},SmallCapsFont={SimSun}]{SimSun}
+% \newCJKfontfamily{\tablecf}[ItalicFont={KaiTi},BoldFont={黑体},BoldItalicFont={楷体-简 粗体}]{KaiTi}
+\setCJKmainfont{SimSun.ttf}
+\renewcommand\CJKfamilydefault{parcf}
+
+\newcommand{\dnd@TitleFont}{\sectioncf\scshape}
+\newcommand{\dnd@TitleFontCN}{\normalfont\scshape}
+
+\newcommand{\dnd@TableTitleFont}{\bfseries}
+%\newcommand{\dnd@TableTitleFont}{\fontfamily{fosj}\parcf\selectfont\bfseries\scshape}
+\newcommand{\dnd@TableBodyFont}{\sffamily\parcf}
+
+\newcommand{\dnd@BoxTitleFont}{\sectioncf\bfseries}
+%\newcommand{\dnd@BoxTitleFont}{\fontfamily{fosj}\parcf\selectfont\bfseries\scshape}
+\newcommand{\dnd@BoxBodyFont}{\sffamily\parcf}
+
+\newcommand{\dnd@StatBlockTitleFont}{\normalfont\bfseries\scshape}
+\newcommand{\dnd@StatBlockSubtitleFont}{\fontfamily{fosj}\selectfont\scshape}
+\newcommand{\dnd@StatBlockBodyFont}{\sffamily}
+
+\newcommand{\dnd@FooterFont}{\normalfont\scshape}
+\newcommand{\dnd@PageNumberFont}{\normalfont}
