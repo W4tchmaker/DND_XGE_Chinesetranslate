@@ -1,0 +1,76 @@
+\documentclass[letterpaper,10pt,twoside,twocolumn,openany,bg=none]{dndbook}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{titlesec}
+\usepackage{lipsum}
+\usepackage{listings}
+\usepackage{indentfirst}
+\usepackage{wrapfig}
+\usepackage{stfloats}
+\usepackage{float}
+\usepackage{etoolbox}
+%\usepackage{multicol}
+\usepackage{caption}
+\usepackage{background}
+\usepackage{ifoddpage}
+\usepackage{etoolbox}
+
+\usepackage{xeCJK}
+\usepackage{hyperref}
+\setCJKmainfont{SimSun}
+
+\makeatletter
+\renewcommand\chapter{\global\@topnum\z@
+                    \@afterindentfalse
+                    \secdef\@chapter\@schapter}
+\def\@topnewpage[#1]{#1}
+\makeatother
+
+\makeatletter
+\setlength{\@fptop}{0pt}
+\makeatother
+
+\backgroundsetup{
+scale=1,
+opacity=1,
+angle=0,
+color=black,
+contents={%
+ \checkoddpage
+  \ifoddpage
+   \includegraphics[width=\paperwidth]{img/backgroundright.jpg}
+  \else
+   \includegraphics[width=\paperwidth]{img/backgroundleft.jpg}
+  \fi
+}
+}
+
+\newcommand{\specialcell}[2][c]{%
+  \begin{tabular}[#1]{@{}l@{}}#2\end{tabular}}
+
+\setlength{\columnsep}{20pt}
+
+\parindent=20pt
+\lstset{%
+  basicstyle=\ttfamily,
+  language=[LaTeX]{TeX},
+}
+\begin{document}
+
+%\begin{multicols}{2}{%
+\include{Barbarian}
+\include{Bard}
+\include{Cleric}
+\include{Druid}
+\include{Fighter}
+\include{Monk}
+\include{Paladin}
+\include{Ranger}
+\include{Rouge}
+\include{Sorcerer}
+\include{Warlock}
+\include{Wizard}
+%}
+%\end{multicols}
+
+\end{document}
